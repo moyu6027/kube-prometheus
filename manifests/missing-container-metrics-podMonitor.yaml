@@ -1,0 +1,26 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: missing-container-metrics
+  namespace: monitoring
+  labels:
+    k8s-app: missing-container-metrics
+    app.kubernetes.io/instance: missing-container-metrics
+    app.kubernetes.io/name: missing-container-metrics
+    app.kubernetes.io/version: 0.21.0
+    app.kubernetes.io/part-of: kube-prometheus
+    app: missing-container-metrics
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: missing-container-metrics
+      app.kubernetes.io/name: missing-container-metrics
+      app.kubernetes.io/part-of: kube-prometheus
+      k8s-app: missing-container-metrics
+      name: missing-container-metrics
+      app: missing-container-metrics
+  podMetricsEndpoints:
+    - port: http
+  namespaceSelector:
+    matchNames:
+      - monitoring
