@@ -108,8 +108,6 @@ Prometheus Operator 为监控 Kubernetes 资源和 Prometheus 实例的管理提
 
 11. 去Grafana看, 默认有一些模板, 也可导入13105,14623,9965,13402,14518,8919模板
 
-![image-20210722154827437](image-20210722154827437.png)
-
 
 
 如果要清理 Prometheus-Operator，可以直接删除对应的资源清单即可
